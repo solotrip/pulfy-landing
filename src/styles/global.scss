@@ -1,0 +1,110 @@
+@import '_global/fonts';
+@import 'mixins';
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+html,
+body {
+  @include custom-scroll;
+  background-color: $bg-color !important;
+  text-rendering: geometricPrecision;
+  margin: 0;
+  font-size: 16px;
+}
+
+#root {
+  overflow-y: auto;
+  height: 100vh;
+  // Prevent scroll appear/ disappear jump
+  margin-left: calc(100vw - 100%);
+}
+
+*, *::after, *::before {
+  @include roboto-regular;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // TODO: Change it with something non intrusive
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: $active-text-color;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: none; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  color: $text-color;
+}
+
+.card {
+  padding: 16px;
+  border-radius: 16px;
+  background: $card-bg-color;
+  @extend .shadow;
+
+  &.no-padding {
+    padding: 0;
+  }
+}
+
+hr {
+  color: $border-color;
+}
+
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.relative-container {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+b {
+  @include roboto-bold;
+}
+
+.mobile-only {
+  display: none;
+  @include xs-to-sm {
+    display: flex;
+  }
+}

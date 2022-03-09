@@ -1,0 +1,31 @@
+@import 'styles/mixins';
+
+.container {
+  @include roboto-bold;
+  border-radius: 16px;
+  height: 32px;
+  background-color: $white;
+  color: $active-text-color;
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover:not(:disabled), &:active:not(:disabled) {
+    background-color: $active-text-color;
+    color: $white;
+  }
+
+  &:disabled {
+    background: $disabled-bg-color;
+    cursor: unset;
+    color: $disabled-text-color;
+  }
+}
+
+.text {
+  margin: 8px;
+}

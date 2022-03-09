@@ -1,0 +1,48 @@
+@import 'styles/mixins';
+
+.container {
+  height: $navbar-height;
+  background-color: $navbar-color;
+  color: $navbar-text-color;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  top:0;
+  z-index: 3;
+  @include xs-to-sm {
+    display: none;
+  }
+}
+
+.logo {
+  align-self: stretch;
+  width: 80px;
+  flex: 0;
+  svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  white-space: nowrap;
+  padding: 0 8px;
+  margin: 0 8px;
+  color: $navbar-text-color;
+  &:hover {
+    color: $primary-color-light;
+  }
+}
+
+.action {
+  padding-left: 60px;
+}

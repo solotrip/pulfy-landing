@@ -1,0 +1,10 @@
+@import 'styles/mixins';
+
+.container {
+  min-height: 75vh;
+  padding: 16px;
+}
+
+.colored {
+  background: $highlight-bg-color;
+}

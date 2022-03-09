@@ -1,0 +1,40 @@
+@import 'styles/mixins';
+
+.container {
+  width: 100%;
+}
+
+.tabs {
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.button {
+  margin: 16px;
+
+  &.active {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+@include xs-to-sm {
+  .buttons {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .button {
+    margin: 8px;
+  }
+}

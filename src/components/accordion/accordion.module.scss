@@ -1,0 +1,32 @@
+@import 'styles/mixins';
+
+.content {
+  padding: 0 16px 24px 16px;
+  opacity: inherit;
+  font-size: 24px;
+}
+
+.header {
+  font-size: 28px;
+  padding: 8px;
+  display: block;
+  border: 2px solid $text-color;
+  border-radius: $border-radius;
+  margin-bottom: 16px;
+  text-align: left;
+  &.active {
+    @include roboto-medium;
+  }
+}
+.item {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: $card-bg-color;
+  padding: 16px;
+  border-radius: 16px;
+}

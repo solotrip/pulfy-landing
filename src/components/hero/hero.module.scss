@@ -1,0 +1,45 @@
+@import 'styles/mixins';
+
+.container {
+  margin-top: $navbar-height;
+  height: calc(100vh - $navbar-height);
+  background-color: $primary-color-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: $navbar-height + 16px, 16px 16px 16px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    @include roboto-medium;
+    @extend .text-shadow;
+    font-size: 48px;
+    color: $white
+  }
+
+  @include xs-to-sm {
+    margin-top: 0;
+    height: 100vh;
+  }
+}
+
+.logo {
+  height: 35vh;
+  width: auto;
+}
+
+.action {
+  height: 48px;
+  border-radius: 24px;
+  padding: 8px 32px;
+  margin: 16px;
+  font-size: 24px;
+}
+@include xs-to-sm {
+  .callToAction {
+    background-color: $primary-color-light;
+    color: $white;
+  }
+}
