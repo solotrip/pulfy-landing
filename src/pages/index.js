@@ -110,13 +110,13 @@ export default function Home () {
             Get travel updates and recommendations based on restrictions,
             requirements, events, festivals, costs, weather and much more.
           </div>{' '}
-          <Link to='/onboarding/1'>
+          <a href='https://pulfy-dev-fe.herokuapp.com/onboarding/1'>
             <button className={styles.actionButton}>Get Started</button>
-          </Link>
+          </a>
           <div className={styles.row1Subtitle2}>Already member? </div>
-          <Link to='/login'>
+          <a href='https://pulfy-dev-fe.herokuapp.com/login'>
             <button className={styles.actionButton2}>Login</button>
-          </Link>
+          </a>
         </div>
         <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
       </div>
@@ -313,7 +313,7 @@ export default function Home () {
             could get access to our api or demand a custom solution.
           </div>
 
-          <Link to='/onboarding/1'>
+          <Link to='/pulfy-for-business'>
             <div className={styles.actionButton}>Learn More</div>
           </Link>
         </div>
