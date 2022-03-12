@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 import { Link } from 'gatsby'
-import "../styles/global.scss"
+import '../styles/global.scss'
 import { isMobile, isIOS, isAndroid } from 'react-device-detect'
 import landingLogo from '../../static/img/pulfy-landing-logo.png'
 
@@ -8,7 +8,7 @@ import ImageShadow from 'react-image-shadow'
 import 'react-image-shadow/assets/index.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-import * as styles from "./home.module.scss"
+import * as styles from './home.module.scss'
 
 //Change it later
 const appStoreLink = 'https://apps.apple.com/us/app/slack/id618783545'
@@ -23,7 +23,6 @@ const appDownloader = () => {
   }
   //else show error : App download is mobile-only.
 }
-
 
 let bucketlist = [
   {
@@ -91,52 +90,47 @@ let bucketlist = [
   }
 ]
 
-
 export default function Home () {
   return (
     <div className={styles.outer}>
       <div className={styles.navbar}>
-         <div className={styles.logo}>
-           <img
-             src={landingLogo}
-             style={{ width: '150px' }}
-             alt=""
-           />
-         </div>
-       </div>
+        <div className={styles.logo}>
+          <img src={landingLogo} style={{ width: '150px' }} alt='' />
+        </div>
+      </div>
 
-       <div className={styles.wrapper}>
-         <div className={styles.row1}>
-           <div className={styles.row1Title}>
-             <div>Personalized</div>
-             <div>Travel</div>
-             <div>Recommendations</div>
-           </div>
-           <div className={styles.row1Subtitle}>
-             Get travel updates and recommendations based on restrictions,
-             requirements, events, festivals, costs, weather and much more.
-           </div>{' '}
-           <Link to="/onboarding/1">
-             <button className={styles.actionButton}>Get Started</button>
-           </Link>
-           <div className={styles.row1Subtitle2}>Already member? </div>
-           <Link to="/login">
-             <button className={styles.actionButton2}>Login</button>
-           </Link>
-         </div>
-         <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
-       </div>
-       <div className={styles.videoContainer}>
+      <div className={styles.wrapper}>
+        <div className={styles.row1}>
+          <div className={styles.row1Title}>
+            <div>Personalized</div>
+            <div>Travel</div>
+            <div>Recommendations</div>
+          </div>
+          <div className={styles.row1Subtitle}>
+            Get travel updates and recommendations based on restrictions,
+            requirements, events, festivals, costs, weather and much more.
+          </div>{' '}
+          <Link to='/onboarding/1'>
+            <button className={styles.actionButton}>Get Started</button>
+          </Link>
+          <div className={styles.row1Subtitle2}>Already member? </div>
+          <Link to='/login'>
+            <button className={styles.actionButton2}>Login</button>
+          </Link>
+        </div>
+        <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
+      </div>
+      <div className={styles.videoContainer}>
         <video
           autoPlay
           src={
             'https://res.cloudinary.com/dtp5yitjt/video/upload/v1629817028/combined2_pqra8s.mp4'
           }
           playsInline
-          loop="loop"
+          loop='loop'
           muted
-          preload="auto"
-          id="myVideo"
+          preload='auto'
+          id='myVideo'
           className={styles.videoContainer}
         >
           your browser does not support video tag.
@@ -159,8 +153,8 @@ export default function Home () {
             }
             width={'100%'}
             shadowBlur={20}
-            alt="a"
-            key="1"
+            alt='a'
+            key='1'
           />
         </div>
       </div>
@@ -182,7 +176,7 @@ export default function Home () {
             }
             width={'70%'}
             shadowBlur={10}
-            alt="a"
+            alt='a'
           />
         </div>
       </div>
@@ -196,7 +190,7 @@ export default function Home () {
               }
               width={'80%'}
               shadowBlur={10}
-              alt="a"
+              alt='a'
             />
           </div>
           <div className={styles.featureText}>
@@ -226,7 +220,7 @@ export default function Home () {
               }
               width={'80%'}
               shadowBlur={10}
-              alt="a"
+              alt='a'
             />
           </div>
         </div>
@@ -256,7 +250,7 @@ export default function Home () {
                   src={spec.link}
                   className={styles.slideElement3}
                   shadowBlur={10}
-                  alt="a"
+                  alt='a'
                 />
                 <div className={styles.slideElementTitle2}>{spec.title}</div>
               </div>
@@ -275,8 +269,8 @@ export default function Home () {
               }
               width={'80%'}
               shadowBlur={10}
-              alt="a"
-              key="1"
+              alt='a'
+              key='1'
             />
           </div>
           <div className={styles.featureText}>
@@ -304,8 +298,8 @@ export default function Home () {
               }
               width={'80%'}
               shadowBlur={10}
-              alt="a"
-              key="1"
+              alt='a'
+              key='1'
             />
           </div>
         </div>
@@ -313,28 +307,37 @@ export default function Home () {
 
       <div className={styles.wrapper}>
         <div className={styles.row2}>
-        <div className={styles.featureTitle}>Pulfy for Business</div>
+          <div className={styles.featureTitle}>Pulfy for Business</div>
           <div className={styles.row1Subtitle}>
-            Are you looking to integrate our solutions for your business? You could get access to our api or demand a custom solution.
+            Are you looking to integrate our solutions for your business? You
+            could get access to our api or demand a custom solution.
           </div>
 
-          <Link to="/onboarding/1">
+          <Link to='/onboarding/1'>
             <div className={styles.actionButton}>Learn More</div>
           </Link>
         </div>
       </div>
 
       <div className={styles.staticWrapper}>
-        <Link to='/'><button className={styles.elementLink}>Home</button></Link>
-        <Link to='/'>  <button onClick={appDownloader} className={styles.elementLink}>
-          Download the App
-        </button>
+        <Link to='/'>
+          <button className={styles.elementLink}>Home</button>
         </Link>
-      <Link to='/pulfy-for-business'>  <button className={styles.elementLink}>Pulfy for Business</button></Link>
+        <Link to='/'>
+          {' '}
+          <button onClick={appDownloader} className={styles.elementLink}>
+            Download the App
+          </button>
+        </Link>
+        <Link to='/pulfy-for-business'>
+          {' '}
+          <button className={styles.elementLink}>Pulfy for Business</button>
+        </Link>
 
-        <Link to='/privacy-and-terms'><button className={styles.elementLink}>Privacy & Terms</button></Link>
+        <Link to='/privacy-and-terms'>
+          <button className={styles.elementLink}>Privacy & Terms</button>
+        </Link>
       </div>
-
-     </div>
+    </div>
   )
 }
