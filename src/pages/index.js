@@ -325,12 +325,14 @@ export default function Home () {
       </div>
 
       <div className={styles.staticWrapper}>
-        <button onClick={appDownloader} className={styles.elementLink}>
+        <Link to='/'><button className={styles.elementLink}>Home</button></Link>
+        <Link to='/'>  <button onClick={appDownloader} className={styles.elementLink}>
           Download the App
         </button>
-        <Link to='/pulfy-for-business'><button className={styles.elementLink}>Pulfy for Business</button></Link>
-        <button className={styles.elementLink}>About Pulfy</button>
-        <button className={styles.elementLink}>Privacy & Terms</button>
+        </Link>
+      <Link to='/pulfy-for-business'>  <button className={styles.elementLink}>Pulfy for Business</button></Link>
+
+        <Link to='/privacy-and-terms'><button className={styles.elementLink}>Privacy & Terms</button></Link>
       </div>
 
      </div>

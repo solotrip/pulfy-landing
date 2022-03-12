@@ -298,15 +298,16 @@ export default function Business () {
         </div>
 
 
-      <div className={styles.staticWrapper}>
-        <button onClick={appDownloader} className={styles.elementLink}>
-          Download the App
-        </button>
+        <div className={styles.staticWrapper}>
+          <Link to='/'><button className={styles.elementLink}>Home</button></Link>
+          <Link to='/'>  <button onClick={appDownloader} className={styles.elementLink}>
+            Download the App
+          </button>
+          </Link>
+        <Link to='/pulfy-for-business'>  <button className={styles.elementLink}>Pulfy for Business</button></Link>
 
-        <Link to='/pulfy-for-business'><div className={styles.elementLink}>Pulfy for Business</div></Link>
-        <button className={styles.elementLink}>About Pulfy</button>
-        <button className={styles.elementLink}>Privacy & Terms</button>
-      </div>
+          <Link to='/privacy-and-terms'><button className={styles.elementLink}>Privacy & Terms</button></Link>
+        </div>
 
      </div>
   )

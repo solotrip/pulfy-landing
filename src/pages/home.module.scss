@@ -258,6 +258,31 @@
   padding-left: 5px;
   padding-right: 5px;
 }
+
+.row1Subtitle5 {
+  font-size: 20px;
+  color: rgb(160, 170, 186);
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 32px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.privacyTitle {
+  font-size: 28px;
+  color: $white;
+  margin-top: 20px;
+  margin-bottom: 6px;
+
+}
 .buttonsHolder{
   display: flex;
   flex-direction: column;
@@ -505,6 +530,39 @@
    -webkit-text-fill-color: transparent;
    margin-top: 50px;
 }
+
+.featureTitle5 {
+  font-size: 34px;
+  //color: rgb(160, 170, 186);
+  font-weight: 400;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  // background-color: fuchsia;
+  //smax-width: 600px;
+  background-color: #5e5ce6;
+  background-image: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f8a4aa);
+  background-image: -moz-linear-gradient(to right, #12c2e9, #c471ed, #f8a4aa);
+  background-image: -o-linear-gradient(to right, #12c2e9, #c471ed, #f8a4aa);
+   background-image: linear-gradient(to right, #12c2e9, #c471ed, #f8a4aa);
+   display: inline-block;
+   /* Set the background size and repeat properties. */
+   background-size: 100%;
+   background-repeat: repeat;
+
+   /* Use the text as a mask for the background. */
+   /* This will show the gradient as a text color rather than element bg. */
+   -moz-background-clip: text;
+   -moz-text-fill-color: transparent;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-top: 50px;
+}
+
 
 .featureSubtitle {
   font-size: 20px;
