@@ -99,6 +99,7 @@ export default function Home () {
         </div>
       </div>
 
+<<<<<<< Updated upstream
       <div className={styles.wrapper}>
         <div className={styles.row1}>
           <div className={styles.row1Title}>
@@ -121,6 +122,30 @@ export default function Home () {
         <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
       </div>
       <div className={styles.videoContainer}>
+=======
+       <div className={styles.wrapper}>
+         <div className={styles.row1}>
+           <div className={styles.row1Title}>
+             <div>Personalized</div>
+             <div>Travel</div>
+             <div>Recommendations</div>
+           </div>
+           <div className={styles.row1Subtitle}>
+             Get travel updates and recommendations based on restrictions,
+             requirements, events, festivals, costs, weather and much more.
+           </div>{' '}
+           <a href="https://pulfy-dev-fe.herokuapp.com/onboarding/1">
+             <button className={styles.actionButton}>Get Started</button>
+           </Link>
+           <div className={styles.row1Subtitle2}>Already member? </div>
+           <a href="https://pulfy-dev-fe.herokuapp.com/login">
+             <button className={styles.actionButton2}>Login</button>
+           </Link>
+         </div>
+         <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
+       </div>
+       <div className={styles.videoContainer}>
+>>>>>>> Stashed changes
         <video
           autoPlay
           src={
@@ -313,7 +338,11 @@ export default function Home () {
             could get access to our api or demand a custom solution.
           </div>
 
+<<<<<<< Updated upstream
           <Link to='/pulfy-for-business'>
+=======
+          <Link to="/pulfy-for-business">
+>>>>>>> Stashed changes
             <div className={styles.actionButton}>Learn More</div>
           </Link>
         </div>
