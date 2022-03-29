@@ -307,6 +307,35 @@ export default function Home () {
 
       <div className={styles.wrapper}>
         <div className={styles.row2}>
+          <div className={styles.featureTitle}>Anywhere, anytime.</div>
+          <div className={styles.row1Subtitle}>
+            Access your recommendations, wishlist and notifications from anywhere at anytime. Download Pulfy App for best experience.
+          </div>
+
+          <div className={styles.featureImage}>
+            <ImageShadow
+              className={styles.calendar}
+              src={
+                'https://ik.imagekit.io/stmedia/device-mashup_JvTVkaSrr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648556876372'
+              }
+              width={'100%'}
+              shadowBlur={100}
+              alt='a'
+              key='1'
+            />
+          </div>
+
+          <Link to='/'>
+            {' '}
+            <button onClick={appDownloader} className={styles.actionButton}>
+              Download the App
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      <div className={styles.wrapper}>
+        <div className={styles.row2}>
           <div className={styles.featureTitle}>Pulfy for Business</div>
           <div className={styles.row1Subtitle}>
             Are you looking to integrate our solutions for your business? You
