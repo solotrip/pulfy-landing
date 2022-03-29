@@ -206,6 +206,53 @@ export default function Business () {
         </div>
       </div>
 
+      {!isMobile ? (
+        <div className={styles.featuresHolder}>
+          <div className={styles.featureImage}>
+            <ImageShadow
+              className={styles.calendar}
+              src={'https://ik.imagekit.io/stmedia/databindings2_TGONem1ed.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648564111983'}
+              width={'80%'}
+              shadowBlur={80}
+              shadowRadius={'10'}
+              alt='a'
+              key='1'
+            />
+          </div>
+          <div className={styles.featureText}>
+            <div className={styles.featureTitle}>
+              Data Bindings.
+            </div>
+            <div className={styles.featureSubtitle3}>
+
+              Easily merge/migrate/integrate new data to your product with Pulfy data bindings.
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.featuresHolder}>
+          <div className={styles.featureText}>
+            <div className={styles.featureTitle}>
+              Data Bindings.
+            </div>
+            <div className={styles.featureSubtitle3}>
+              Easily merge/migrate/integrate new data to your product with Pulfy data bindings.
+            </div>
+          </div>
+          <div className={styles.featureImage}>
+            <ImageShadow
+              className={styles.calendar}
+              src={'https://ik.imagekit.io/stmedia/databindings2_TGONem1ed.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648564111983'}
+              width={'80%'}
+              shadowBlur={80}
+              alt='a'
+              key='1'
+            />
+          </div>
+        </div>
+      )}
+
+
       <div className={styles.wrapper}>
         <div className={styles.row2}>
           <div className={styles.featureTitle}>Custom Solutions</div>
@@ -308,7 +355,7 @@ export default function Business () {
                 name='message'
                 className='w-full bg-gray-800 rounded border border-gray-700 focus:border-gold focus:ring-2 focus:ring-gold h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
                 onChange={e => setMessage(e.target.value)}
-                className={styles.formInput}
+                className={styles.formInputArea}
                 placeHolder='Please describe how would you like to use our data or solutions. It would be better for us to introduce your company and  specify its size  (how many monthly active users you have, which countries you operate etc.)'
               />
             </div>
