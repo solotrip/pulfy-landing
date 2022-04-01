@@ -36,6 +36,10 @@ const options = [
     label: 'I would like to get instant updates to notify my customers/users.'
   },
   {
+    value: 'pulfy-datasets',
+    label: 'I would like to download single/multiple destinations dataset such as "data of destinations in Europe".'
+  },
+  {
     value: 'pulfy-reports',
     label:
       'I would like to get customized weekly/monthly/annually travel reports.'
@@ -255,6 +259,20 @@ export default function Business () {
 
       <div className={styles.wrapper}>
         <div className={styles.row2}>
+          <div className={styles.featureTitle}>Datasets.</div>
+          <div className={styles.row1Subtitle}>
+            We have covered 3075 unique destinations of the world, you can get single or multiple destinations data in JSON format.
+          </div>
+          <Link to='/sample-data'>
+          <button  className={styles.actionButton}>
+            See sample data
+          </button>
+          </Link>
+        </div>
+      </div>
+
+      <div className={styles.wrapper}>
+        <div className={styles.row2}>
           <div className={styles.featureTitle}>Custom Solutions</div>
           <div className={styles.row1Subtitle}>
             Not satisfied with our solutions? Talk to us to learn what we can do
@@ -356,7 +374,7 @@ export default function Business () {
                 className='w-full bg-gray-800 rounded border border-gray-700 focus:border-gold focus:ring-2 focus:ring-gold h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
                 onChange={e => setMessage(e.target.value)}
                 className={styles.formInputArea}
-                placeHolder='Please describe how would you like to use our data or solutions. It would be better for us to introduce your company and  specify its size  (how many monthly active users you have, which countries you operate etc.)'
+                placeHolder='Please describe how would you like to use our data or solutions. It would be better for us to introduce your company and  specify its size  (how many monthly active users you have, which countries you operate etc.) Even if it is a hobby project, please specify it to help you out.'
               />
             </div>
             <button type='submit' className={styles.actionButton}>
