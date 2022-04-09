@@ -12,9 +12,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import * as styles from './home.module.scss'
 
 //Change it later
-const appStoreLink = 'https://apps.apple.com/us/app/slack/id618783545'
-const playStoreLink =
-  'https://play.google.com/store/apps/details?id=com.Slack&hl=en&gl=US'
+const appStoreLink = 'https://www.pulfy.com/app'
+const playStoreLink ='https://www.pulfy.com/app'
 
 const appLink = isIOS ? appStoreLink : isAndroid ? playStoreLink : null
 
@@ -120,19 +119,19 @@ export default function Home () {
       // eslint-disable-next-line max-len
       content="Get travel updates and recommendations based on restrictions, requirements, events, festivals, costs, weather and much more."
     />
-    <meta name="twitter:app:country" content="US" />
-    <meta name="twitter:app:name:iphone" content="Pulfy" />
-    <meta name="twitter:app:id:iphone" content="929750075" />
-    <meta name="twitter:app:url:iphone" content="cannonball://poem/5149e249222f9e600a7540ef" />
-    <meta name="twitter:app:name:ipad" content="Pulfy" />
-    <meta name="twitter:app:id:ipad" content="929750075" />
-    <meta name="twitter:app:url:ipad" content="cannonball://poem/5149e249222f9e600a7540ef" />
-    <meta name="twitter:app:name:googleplay" content="Pulfy" />
-    <meta name="twitter:app:id:googleplay" content="io.fabric.samples.cannonball" />
-    <meta
-      name="twitter:app:url:googleplay"
-      content="http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef"
-    />
+    {/*<meta name="twitter:app:country" content="US" />*/}
+    {/*<meta name="twitter:app:name:iphone" content="Pulfy" />*/}
+    {/*<meta name="twitter:app:id:iphone" content="929750075" />*/}
+    {/*<meta name="twitter:app:url:iphone" content="cannonball://poem/5149e249222f9e600a7540ef" />*/}
+    {/*<meta name="twitter:app:name:ipad" content="Pulfy" />*/}
+    {/*<meta name="twitter:app:id:ipad" content="929750075" />*/}
+    {/*<meta name="twitter:app:url:ipad" content="cannonball://poem/5149e249222f9e600a7540ef" />*/}
+    {/*<meta name="twitter:app:name:googleplay" content="Pulfy" />*/}
+    {/*<meta name="twitter:app:id:googleplay" content="io.fabric.samples.cannonball" />*/}
+    {/*<meta*/}
+    {/*  name="twitter:app:url:googleplay"*/}
+    {/*  content="http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef"*/}
+    {/*/>*/}
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://pulfy.com" />
     <meta

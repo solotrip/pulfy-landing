@@ -13,10 +13,8 @@ import 'react-image-shadow/assets/index.css'
 import * as styles from './home.module.scss'
 
 //Change it later
-const appStoreLink = 'https://apps.apple.com/us/app/slack/id618783545'
-const playStoreLink =
-  'https://play.google.com/store/apps/details?id=com.Slack&hl=en&gl=US'
-
+const appStoreLink = 'https://www.pulfy.com/app'
+const playStoreLink ='https://www.pulfy.com/app'
 const appLink = isIOS ? appStoreLink : isAndroid ? playStoreLink : null
 
 const appDownloader = () => {
