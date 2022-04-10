@@ -165,11 +165,11 @@ export default function Home () {
             Get travel updates and recommendations based on restrictions,
             requirements, events, festivals, costs, weather and much more.
           </div>{' '}
-          <a href='https://pulfy-dev-fe.herokuapp.com/onboarding/1'>
+          <a href='https://pulfy.com/app/onboarding/1'>
             <button className={styles.actionButton}>Get Started</button>
           </a>
           <div className={styles.row1Subtitle2}>Already member? </div>
-          <a href='https://pulfy-dev-fe.herokuapp.com/login'>
+          <a href='https://pulfy.com/app/login'>
             <button className={styles.actionButton2}>Login</button>
           </a>
         </div>
