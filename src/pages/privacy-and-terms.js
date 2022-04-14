@@ -24,7 +24,7 @@ export default function Terms () {
     <div className={styles.outer}>
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          <img src={landingLogo} style={{ width: '150px' }} alt='' />
+          <img src={landingLogo} style={{ width: '210px' }} alt='' />
         </div>
       </div>
 

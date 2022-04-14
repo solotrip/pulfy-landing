@@ -150,7 +150,7 @@ export default function Home () {
   </Helmet>
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          <img src={landingLogo} style={{ width: '150px' }} alt='' />
+          <img src={landingLogo} style={{ width: '210px' }} alt='' />
         </div>
       </div>
 
@@ -371,7 +371,7 @@ export default function Home () {
             <ImageShadow
               className={styles.calendar}
               src={
-                'https://ik.imagekit.io/stmedia/device-mashup_JvTVkaSrr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648556876372'
+                'https://ik.imagekit.io/stmedia/3_Device_Mashup_dSOgSlDgt.png'
               }
               width={'100%'}
               shadowBlur={100}
