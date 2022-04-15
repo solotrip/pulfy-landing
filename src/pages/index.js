@@ -5,7 +5,7 @@ import { isMobile, isIOS, isAndroid } from 'react-device-detect'
 import landingLogo from '../../static/img/pulfy-landing-logo.png'
 import { Helmet } from 'react-helmet'
 
-import ImageShadow from 'react-image-shadow'
+import img from 'react-image-shadow'
 import 'react-image-shadow/assets/index.css'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Welcome from '../components/welcome'
@@ -185,7 +185,7 @@ export default function Home () {
         </div>
 
         <div className={styles.featureImage}>
-          <ImageShadow
+          <img
             className={styles.calendar}
             src={
               'https://ik.imagekit.io/stmedia/tags2_RlueUb_65.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1644520753861'
@@ -208,7 +208,7 @@ export default function Home () {
           </div>
         </div>
         <div className={styles.featureImage}>
-          <ImageShadow
+          <img
             className={styles.calendar}
             src={
               'https://ik.imagekit.io/7zlqc1cmihe/July_kJ0X3FxmQg.svg?updatedAt=1629801887574'
@@ -222,7 +222,7 @@ export default function Home () {
       {!isMobile ? (
         <div className={styles.featuresHolder}>
           <div className={styles.featureImage}>
-            <ImageShadow
+            <img
               className={styles.calendar}
               src={
                 'https://ik.imagekit.io/stmedia/Screen_Shot_2022-02-10_at_21.40.31_z2iy-SpdQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644518516014'
@@ -252,7 +252,7 @@ export default function Home () {
             </div>
           </div>
           <div className={styles.featureImage}>
-            <ImageShadow
+            <img
               className={styles.calendar}
               src={
                 'https://ik.imagekit.io/stmedia/Screen_Shot_2022-02-10_at_21.40.31_z2iy-SpdQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644518516014'
@@ -285,7 +285,7 @@ export default function Home () {
           <div className={styles.slideHolder}>
             {bucketlist.map(spec => (
               <div key={`bl-${spec.link}`}>
-                <ImageShadow
+                <img
                   src={spec.link}
                   className={styles.slideElement3}
                   shadowBlur={10}
@@ -301,7 +301,7 @@ export default function Home () {
       {!isMobile ? (
         <div className={styles.featuresHolder}>
           <div className={styles.featureImage}>
-            <ImageShadow
+            <img
               className={styles.calendar}
               src={
                 'https://ik.imagekit.io/stmedia/Screen_Shot_2022-02-10_at_22.25.15_kshFhdM4b.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644521145299'
@@ -330,7 +330,7 @@ export default function Home () {
             </div>
           </div>
           <div className={styles.featureImage}>
-            <ImageShadow
+            <img
               className={styles.calendar}
               src={
                 'https://ik.imagekit.io/stmedia/Screen_Shot_2022-02-10_at_22.25.15_kshFhdM4b.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644521145299'
@@ -350,10 +350,8 @@ export default function Home () {
           <div className={styles.row1Subtitle}>
             Access your recommendations, wishlist and notifications from anywhere at anytime. Download Pulfy App for best experience.
           </div>
-
-          <div className={styles.featureImage}>
-            <ImageShadow
-              className={styles.calendar}
+            <img
+              className={styles.featureImage2}
               src={
                 'https://ik.imagekit.io/stmedia/3_Device_Mashup_dSOgSlDgt.png'
               }
@@ -362,7 +360,6 @@ export default function Home () {
               alt='a'
               key='1'
             />
-          </div>
 
           <Link to='/'>
             {' '}
