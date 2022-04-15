@@ -106,7 +106,7 @@ export default function Home () {
     <meta name="twitter:card" content="app" />
     <meta
       name="twitter:image"
-      content="https://www.pulfy.com/app/image.png"
+      content="https://www.pulfy.com/logo.png"
     />
     <meta
       name="twitter:title"
@@ -121,7 +121,7 @@ export default function Home () {
       content="Get travel updates and recommendations based on restrictions, requirements, events, festivals, costs, weather and much more."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://pulfy.com" />
+    <meta property="og:url" content="https://pulfy.com" />
     <meta
       property="og:title"
       content="Pulfy - Get personalized travel recommendations, updates, restrictions
@@ -133,8 +133,45 @@ export default function Home () {
     />
     <meta
       property="og:image"
-      content="https://www.pulfy.com/app/image.png"
+      content="http://www.pulfy.com/logo.png"
     />
+    <meta property="og:image:secure_url" content="https://www.pulfy.com/logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <script type="application/ld+json">
+       {`
+     {
+       '@context': 'https://schema.org',
+       '@type': 'Organization',
+       name: 'Pulfy',
+       legalName: 'Pulfy Technology Llc',
+       url: 'http://www.pulfy.com',
+       logo: 'https://www.pulfy.com/image.png',
+       foundingDate: '2022',
+       founders: [
+     {
+       '@type': 'Person',
+       name: 'Fatih Tas'
+     },
+     {
+       '@type': 'Person',
+       name: 'Berk Durmus'
+     }
+       ],
+       contactPoint: {
+       '@type': 'ContactPoint',
+       contactType: 'customer support',
+       email: 'support@pulfy.com'
+     },
+       sameAs: [
+       'http://instagram.com/pulfycom',
+       'http://www.twitter.com/pulfycom',
+       'https://www.tiktok.com/@pulfy.com'
+       ]
+     }
+     ]}`}
+     </script>
   </Helmet>
       <Welcome/>
       <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
