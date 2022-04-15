@@ -103,7 +103,7 @@ export default function Home () {
       // eslint-disable-next-line max-len
       content="Get travel updates and recommendations based on restrictions, requirements, events, festivals, costs, weather and much more"
     />
-    <meta name="twitter:card" content="app" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
       content="https://www.pulfy.com/logo.png"
