@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import * as styles from "./welcome.module.scss"
 import cn from "classnames"
 
-export default function Welcome ({ children, isColored, id, className }) {
+export default function Welcome ({ children, isColored, id, className,auth }) {
   return (
     <div className={styles.container}>
       <div className={styles.videoContainer}>
@@ -29,7 +29,16 @@ export default function Welcome ({ children, isColored, id, className }) {
           <h1 className={styles.motto}>
             Get personalized travel recommendations, updates, restrictions and
             much more.
-          </h1>
+          </h1>{auth ? <>
+          <a className={styles.actionButton} href='https://pulfy.com/app/browse'>
+            Go to App
+          </a>
+          <div className={styles.login2}>
+          </div>
+          <div className={styles.login2}>
+          </div>
+          </>
+           :<>
           <a className={styles.actionButton} href='https://pulfy.com/app/signup'>
             Signup
           </a>
@@ -39,7 +48,9 @@ export default function Welcome ({ children, isColored, id, className }) {
           <a className={styles.login2}  href='https://pulfy.com/app/login'>
             <span>Do you have an account?</span> Login
           </a>
-          
+          </>}
+
+
         </div>
       </div>
     </div>

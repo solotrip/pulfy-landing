@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { Link } from 'gatsby'
 import '../styles/global.scss'
 import { isMobile, isIOS, isAndroid } from 'react-device-detect'
@@ -92,6 +92,13 @@ let bucketlist = [
 ]
 
 export default function Home () {
+  const [auth, setAuth] = useState(false)
+//CapacitorStorage.accessToken:
+  useEffect(() => {
+    if (localStorage.getItem('CapacitorStorage.accessToken')) {
+      setAuth(true)
+    }
+  }, [])
   return (
     <div className={styles.outer}>
     <Helmet>
@@ -173,7 +180,7 @@ export default function Home () {
      ]}`}
      </script>
   </Helmet>
-      <Welcome/>
+      <Welcome auth={auth}/>
       <div className={styles.row1Subtitle2}>Scroll down to learn more.</div>
       <div className={styles.featuresHolder}>
         <div className={styles.featureText}>
