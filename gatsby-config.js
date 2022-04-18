@@ -19,10 +19,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
-    },
-    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: 0

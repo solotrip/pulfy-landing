@@ -1,5 +1,5 @@
 [[redirects]]
-    from = "/*"
-    to = "https://pulfy.com/"
+    from = "/app/*"
+    to = "https://pulfy.netlify.app/:splat"
     status = 200
     force = true

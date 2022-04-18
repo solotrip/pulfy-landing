@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from 'gatsby'
 import * as styles from "./welcome.module.scss"
+import cn from "classnames"
 
 export default function Welcome ({ children, isColored, id, className,auth }) {
   return (
