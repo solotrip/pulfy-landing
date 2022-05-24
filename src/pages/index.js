@@ -176,16 +176,18 @@ export default function Landing() {
           <div className={styles.mottoMobile}>
             <div>Find destinations</div>
             <div>based on</div>
-            <div className={styles.highlighted}>
+            <div className={styles.highlightedMotto}>
               <TextLoop>
-                <span>events</span>
-                <span>festivals</span>
-                <span>restrictions</span>
-                <span>cost of living</span>
-                <span>acommodation prices</span>
-                <span>safety</span>
-                <span>weather</span>
-                <span>activities</span>
+                <div className={styles.highlightedMotto}>events</div>
+                <div className={styles.highlightedMotto}>festivals</div>
+                <div className={styles.highlightedMotto}>restrictions</div>
+                <div className={styles.highlightedMotto}>cost of living</div>
+                <div className={styles.highlightedMotto}>
+                  acommodation prices
+                </div>
+                <div className={styles.highlightedMotto}>safety</div>
+                <div className={styles.highlightedMotto}>weather</div>
+                <div className={styles.highlightedMotto}>activities</div>
               </TextLoop>
             </div>
           </div>
@@ -197,7 +199,9 @@ export default function Landing() {
         </div>
         <button className={styles.startMobile}>
           <MdSearch className={styles.searchIcon} />
-          <div className={styles.startText}>Start your search</div>
+          <a href="https://pulfy.com/app/browse" className={styles.startText}>
+            Start your search
+          </a>
         </button>
       </div>
       <div className={styles.featured}>

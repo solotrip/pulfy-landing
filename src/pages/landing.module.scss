@@ -6,6 +6,8 @@
     background-color: white;
     height: 100%; // 100%
     width: 100%;
+    overflow-x: hidden;
+    
 }
 
 .header {
@@ -86,6 +88,14 @@
 .highlighted{
    
     color: #3cafeb;
+    
+}
+
+.highlightedMotto{
+   
+    color: #3cafeb;
+   
+    max-width: 200px;
     
 }
 .plane {
@@ -232,6 +242,7 @@
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .logo {
@@ -370,9 +381,11 @@
     height: 97px;
     width: 400px;
     margin: 10px;
+    margin-bottom: 20px;
 }
 
 .hwitemIndex {
+
     color:#3cafeb;
     font-size: 17px;
 }
@@ -435,6 +448,9 @@
 .hwitemSubtitle {
     color: #989696;
     font-size: 15px;
+    width: 80%;
+    margin-bottom: 20px;
+    max-width: 300px;
 }
 
 .technology {
@@ -469,6 +485,9 @@
     line-height: 20px;
     font-size: 15px;
     color: #b6b6b6;
+    width: 80%;
+    max-width: 300px;
+
 
 }
 
