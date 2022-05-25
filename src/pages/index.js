@@ -110,7 +110,9 @@ export default function Landing() {
       </Helmet>
       <div className={styles.navbar}>
         <img src={landingLogo} className={styles.logo}></img>
-        <div className={styles.mobileLogin}>Login</div>
+        <a href="https://pulfy.com/app/login" className={styles.mobileLogin}>
+          Login
+        </a>
         <div className={styles.actions}>
           {!auth && (
             <a href="https://pulfy.com/app/login" className={styles.login}>
