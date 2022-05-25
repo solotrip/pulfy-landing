@@ -10,19 +10,20 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-netlify",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: 0
-      }
-    }
-  ]
+        offset: 0,
+      },
+    },
+  ],
 }
