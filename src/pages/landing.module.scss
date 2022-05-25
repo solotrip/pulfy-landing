@@ -333,6 +333,7 @@
     flex-direction: column;
     background-color: white;
     width: 100%;
+    min-height: 500px;
 }
 
 .content2 {
@@ -597,6 +598,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
+    min-height: 500px;
     @include xs-to-md{
         background-color: black;
     }
