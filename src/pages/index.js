@@ -9,7 +9,13 @@ import whiteLogo from "../../static/img/pulfy-landing-logo.png"
 
 import bigImage from "../../static/img/grey.png"
 import mountains from "../../static/img/mountains.png"
+import blue from "../../static/img/blue.png"
+import appstore from "../../static/img/appstore.png"
+import googleplay from "../../static/img/googleplay.png"
+import whiter from "../../static/img/whiter.png"
+
 import { MdClose, MdSearch } from "react-icons/md"
+import { BiCalendarCheck, BiFilter } from "react-icons/bi"
 import {
   Alert28Regular,
   CircleEdit24Regular,
@@ -21,6 +27,8 @@ import technologyImage from "../../static/img/technology.png"
 import data from "../../static/img/data.png"
 
 import * as styles from "./landing.module.scss"
+
+import { Icon } from "@iconify/react"
 
 export default function Landing() {
   const [auth, setAuth] = useState(false)
@@ -146,20 +154,22 @@ export default function Landing() {
             <div>Find destinations</div>
             <div>based on</div>
             <div className={styles.highlighted}>
-              <TextLoop>
-                <span>events</span>
-                <span>festivals</span>
-                <span>restrictions</span>
-                <span>cost of living</span>
-                <span>acommodation prices</span>
-                <span>safety</span>
-                <span>weather</span>
-                <span>activities</span>
+              <TextLoop interval={1200}>
+                <span className={styles.highlightedMotto}>events</span>
+                <span className={styles.highlightedMotto}>festivals</span>
+                <span className={styles.highlightedMotto}>restrictions</span>
+                <span className={styles.highlightedMotto}>cost of living</span>
+                <span className={styles.highlightedMotto}>
+                  acommodation prices
+                </span>
+                <span className={styles.highlightedMotto}> safety</span>
+                <span className={styles.highlightedMotto}>weather</span>
+                <span className={styles.highlightedMotto}>activities</span>
               </TextLoop>
             </div>
           </div>
           <img
-            style={{ opacity: 0.5 }}
+            style={{ opacity: 0.3 }}
             src={bigImage}
             className={styles.plane}
           ></img>
@@ -179,7 +189,7 @@ export default function Landing() {
             <div>Find destinations</div>
             <div>based on</div>
             <div className={styles.highlightedMotto}>
-              <TextLoop>
+              <TextLoop interval={1200}>
                 <div className={styles.highlightedMotto}>events</div>
                 <div className={styles.highlightedMotto}>festivals</div>
                 <div className={styles.highlightedMotto}>restrictions</div>
@@ -211,15 +221,16 @@ export default function Landing() {
           <div className={styles.title}>Featured</div>
           <div className={styles.horizontal}>
             <a
-              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=a&filters%5B0%5D%5Bvariables%5D%5BareaSids%5D%5B0%5D=amsterdam&filters%5B0%5D%5Bvariables%5D%5BareaSids%5D%5B1%5D=santorini&show=hotel-prices&complete=true"
+              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=t&filters%5B0%5D%5Bvariables%5D%5Btags%5D%5B0%5D=non-touristy&complete=true"
               className={styles.horizontalItem}
             >
               <img
-                src={"https://m.pulfy.com/1080/tags/carnivaling.jpeg"}
+                src={"https://m.pulfy.com/1080/tags/adventure.jpeg"}
                 className={styles.horizontalImage}
               ></img>
               <div className={styles.imageTitle}>
-                Carnival destinations to visit in March, April, June
+                Hidden gems with festivals and events on the dates you are
+                available
               </div>
             </a>
             <a
@@ -235,7 +246,7 @@ export default function Landing() {
               </div>
             </a>
             <a
-              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=a&filters%5B0%5D%5Bvariables%5D%5BareaSids%5D%5B0%5D=amsterdam&filters%5B0%5D%5Bvariables%5D%5BareaSids%5D%5B1%5D=santorini&show=hotel-prices&complete=true"
+              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=85&filters%5B1%5D%5Bid%5D=121&complete=true"
               className={styles.horizontalItem}
             >
               <img
@@ -245,8 +256,49 @@ export default function Landing() {
                 className={styles.horizontalImage}
               ></img>
               <div className={styles.imageTitle}>
-                Compare Hotel prices of Amsterdam and Santorini within your
-                available times
+                Destinations in Europe where there is no mask requirement right
+                now
+              </div>
+            </a>
+          </div>
+          <a
+            href="https://pulfy.com/app/browse"
+            className={styles.hwitemTitle3}
+          >
+            Show more
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.featured2}>
+        <div className={styles.content}>
+          <div className={styles.title}>Featured</div>
+          <div className={styles.horizontal}>
+            <a
+              href="https://www.pulfy.com/app/recommendations?months[0]=1&months[1]=2&months[2]=3&months[3]=4&months[4]=5&filters[0][id]=124&complete=true"
+              className={styles.horizontalItem}
+            >
+              <img
+                src={"https://m.pulfy.com/1080/browse/bars.jpeg"}
+                className={styles.horizontalImage}
+              ></img>
+              <div className={styles.imageTitle}>
+                Destinations where bars are open right now
+              </div>
+            </a>
+            <a
+              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=85&filters%5B1%5D%5Bid%5D=121&complete=true"
+              className={styles.horizontalItem}
+            >
+              <img
+                src={
+                  "https://m.pulfy.com/1080/browse/9d40d0e2c0d65a70a3da3f79ff24f2d6"
+                }
+                className={styles.horizontalImage}
+              ></img>
+              <div className={styles.imageTitle}>
+                Destinations in Europe where there is no mask requirement right
+                now
               </div>
             </a>
           </div>
@@ -263,18 +315,16 @@ export default function Landing() {
           <div className={styles.title}>Featured</div>
           <div className={styles.horizontal}>
             <a
-              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=a&filters%5B0%5D%5Bvariables%5D%5BareaSids%5D%5B0%5D=amsterdam&filters%5B0%5D%5Bvariables%5D%5BareaSids%5D%5B1%5D=santorini&show=hotel-prices&complete=true"
+              href="https://www.pulfy.com/app/recommendations/date?filters%5B0%5D%5Bid%5D=t&filters%5B0%5D%5Bvariables%5D%5Btags%5D%5B0%5D=non-touristy&complete=true"
               className={styles.horizontalItemMobile}
             >
               <img
-                src={
-                  "https://m.pulfy.com/1080/browse/9d40d0e2c0d65a70a3da3f79ff24f2d6"
-                }
+                src={"https://m.pulfy.com/1080/tags/adventure.jpeg"}
                 className={styles.horizontalImage}
               ></img>
               <div className={styles.imageTitle}>
-                Compare Hotel prices of Amsterdam and Santorini within your
-                available times
+                Hidden gems with festivals and events on the dates you are
+                available
               </div>
             </a>
           </div>
@@ -291,7 +341,13 @@ export default function Landing() {
           <div className={styles.title2}>How it works</div>
           <div className={styles.innerContent}>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemIndex}>1</div>
+              <div className={styles.hwitemIndex}>
+                <Icon
+                  icon="bi:calendar-check-fill"
+                  color="#3cafeb"
+                  height="60"
+                />
+              </div>
               <div className={styles.hwitemTitle}>Select your dates</div>
               <div className={styles.hwitemSubtitle}>
                 Select the dates you want to travel or choose one of the
@@ -299,7 +355,13 @@ export default function Landing() {
               </div>
             </div>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemIndex}>2</div>
+              <div className={styles.hwitemIndex}>
+                <Icon
+                  icon="bi:filter-square-fill"
+                  color="#3cafeb"
+                  height="60"
+                />
+              </div>
               <div className={styles.hwitemTitle}>Select your passports</div>
               <div className={styles.hwitemSubtitle}>
                 We need your passport/passports to provide you with accurate
@@ -308,7 +370,9 @@ export default function Landing() {
               </div>
             </div>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemIndex}>3</div>
+              <div className={styles.hwitemIndex}>
+                <Icon icon="fa6-solid:passport" color="#3cafeb" height="60" />
+              </div>
               <div className={styles.hwitemTitle}>Select your filters</div>
               <div className={styles.hwitemSubtitle}>
                 You could add some filters to specify your search. Activities,
@@ -317,7 +381,13 @@ export default function Landing() {
               </div>
             </div>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemIndex}>4</div>
+              <div className={styles.hwitemIndex}>
+                <Icon
+                  icon="material-symbols:personalized-recommendations"
+                  color="#3cafeb"
+                  height="60"
+                />
+              </div>
               <div className={styles.hwitemTitle}>
                 Get your trip recommendations
               </div>
@@ -330,9 +400,17 @@ export default function Landing() {
           </div>
         </div>
       </div>
+
+      <div className={styles.lastMotto}>
+        <img src={whiter} className={styles.whiter}></img>
+        <div className={styles.mottoTitle}>World is Changing,</div>
+        <div className={styles.mottoTitle}>
+          Make your travel plans accordingly.
+        </div>
+      </div>
       <div className={styles.technology}>
         <div className={styles.content}>
-          <div className={styles.title}>Technology</div>
+          <div className={styles.titletech}>Technology</div>
           <img src={technologyImage} className={styles.technologyImage}></img>
           <div className={styles.description}>
             Pulfy AI analyzes requirements, restrictions and updates of
@@ -362,7 +440,7 @@ export default function Landing() {
 
       <div className={styles.techAndData}>
         <div className={styles.content}>
-          <div className={styles.title}>Technology & Data</div>
+          <div className={styles.titletech}>Technology & Data</div>
           <div className={styles.techSided}>
             <div className={styles.dataText}>
               We deliver the most comprehensive travel data on the market.
@@ -382,7 +460,14 @@ export default function Landing() {
           <div className={styles.title3}>Features</div>
           <div className={styles.innerContent}>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemTitle2}>
+              <div className={styles.hwitemIndex}>
+                <Icon
+                  icon="fluent:search-square-24-filled"
+                  color="#3cafeb"
+                  height="60"
+                />
+              </div>
+              <div className={styles.hwitemTitle4}>
                 Search & Get Recommendations
               </div>
               <div className={styles.description4}>
@@ -391,14 +476,24 @@ export default function Landing() {
               </div>
             </div>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemTitle2}>Wishlist</div>
+              <div className={styles.hwitemIndex}>
+                <Icon
+                  icon="bi:bookmark-heart-fill"
+                  color="#3cafeb"
+                  height="60"
+                />
+              </div>
+              <div className={styles.hwitemTitle4}>Wishlist</div>
               <div className={styles.description4}>
                 Prioritize the destinations you want to go by adding trip
                 recommendations to your wishlist.
               </div>
             </div>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemTitle2}>
+              <div className={styles.hwitemIndex}>
+                <Icon icon="bxs:bell-ring" color="#3cafeb" height="60" />
+              </div>
+              <div className={styles.hwitemTitle4}>
                 Track & Get Notifications
               </div>
               <div className={styles.description4}>
@@ -409,7 +504,14 @@ export default function Landing() {
               </div>
             </div>
             <div className={styles.hwitem}>
-              <div className={styles.hwitemTitle2}>Analytics</div>
+              <div className={styles.hwitemIndex}>
+                <Icon
+                  icon="fluent:data-histogram-24-filled"
+                  color="#3cafeb"
+                  height="60"
+                />
+              </div>
+              <div className={styles.hwitemTitle4}>Analytics</div>
               <div className={styles.description4}>
                 Compare hotel, hostel, vacation rental prices, cost of living,
                 temperature and restrictions of recommended destinations.
@@ -418,15 +520,27 @@ export default function Landing() {
           </div>
         </div>
       </div>
+      <div className={styles.downloadMobile}>
+        <img src={blue} className={styles.blue}></img>
+        <div className={styles.downloadTitle}>Anywhere, anytime.</div>
+        <div className={styles.downloadSubtitle}>
+          Download Pulfy app to access your recommendations and get updates.
+        </div>
+
+        <div className={styles.downloaders}>
+          <img src={appstore} className={styles.downloader}></img>
+          <img src={googleplay} className={styles.downloader}></img>
+        </div>
+      </div>
 
       <div className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footer1}>
             <img src={whiteLogo} className={styles.logo}></img>
-            <div className={styles.description4}>
-              Solving complexities of travel with ❤️
+            <div className={styles.description6}>
+              Solving complexities of travel.
             </div>
-            <div className={styles.description4}>26020 Kvk, Eskisehir, TR</div>
+            <div className={styles.description6}>26020 Kvk, Eskisehir, TR</div>
           </div>
           <div className={styles.footer2}>
             <div className={styles.footer1}>

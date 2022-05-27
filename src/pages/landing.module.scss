@@ -72,6 +72,7 @@
     width: 100%;
     font-size: 36px;
     font-weight: 900;
+
 }
 
 .mottoMobile {
@@ -83,6 +84,7 @@
     font-size: 36px;
     font-weight: 900;
     z-index: 999;
+
 }
 
 .highlighted{
@@ -93,9 +95,52 @@
 
 .highlightedMotto{
    
-    color: #3cafeb;
+    background-image: -webkit-linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background-image: -moz-linear-gradient(to right,  #30CFD0 0%, #330867 100%);
+    background-image: -o-linear-gradient(to right,#30CFD0 0%, #330867 100%);
+     background-image: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  
+     /* Set the background size and repeat properties. */
+     background-size: 100%;
+  
+  
+     /* Use the text as a mask for the background. */
+     /* This will show the gradient as a text color rather than element bg. */
+     -moz-background-clip: text;
+     -webkit-background-clip: text;
+     background-clip: text;
+  
+     -moz-text-fill-color: transparent;
+     -webkit-text-fill-color: transparent;
    
-    max-width: 200px;
+   
+    
+    
+}
+
+.highlightedMotto2{
+   
+   
+   
+   
+
+     background-image: -webkit-linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+    background-image: -moz-linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+    background-image: -o-linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+     background-image: linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+     display: inline-block;
+     /* Set the background size and repeat properties. */
+     background-size: 100%;
+     background-repeat: repeat;
+  
+     /* Use the text as a mask for the background. */
+     /* This will show the gradient as a text color rather than element bg. */
+     -moz-background-clip: text;
+     -moz-text-fill-color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    
     
 }
 .plane {
@@ -156,8 +201,13 @@
 
 .clouds{
     
-    margin-top: -100px;
+    margin-top: -85px;
+    margin-bottom: 0px;
+    @include xl{
+        margin-bottom: -40px;
+    }
    width: 100%;
+   height: 60%;
     margin-left: auto;
     margin-right: auto;
 
@@ -168,7 +218,7 @@
     
    width: 150%;
 
-    margin-top: -110px;
+    margin-top: -105px;
     margin-left:-50%;
     margin-right: auto;
     margin-bottom: auto;
@@ -181,7 +231,7 @@
     margin-top: -20px;
     border-radius: 16px;
     background-color: rgba(234,234,234,1);
-    height: 40px;
+    height: 48px;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -196,7 +246,7 @@
     margin-top: -20px;
     border-radius: 16px;
     background-color: rgba(234,234,234,1);
-    height: 40px;
+    height: 48px;
     width: 80%;
     
     margin-left: 10px;
@@ -207,7 +257,7 @@
 }
 
 .searchIcon, .clearIcon {
-    font-size: 24px;
+    font-size: 28px;
     flex: 0 0 auto;
     margin-top: auto;
     margin-bottom: auto;
@@ -221,7 +271,7 @@
     margin-top: auto;
     margin-bottom: auto;
     padding-left: 5px;
-    font-size: 18px;
+    font-size: 20px;
     color: #4d4d4d;
   }
 
@@ -288,11 +338,33 @@
         margin-top: 60px;
         display:none;
     }
+
+    @include md-to-lg{
+        display:none;
+    }
     margin-top: 10vw;
     display: flex;
     flex-direction: column;
-    background-color: #070611;
+    
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(183,206,221,0) 100%);
     width: 100%;
+   
+}
+
+.featured2 {
+    @include xs-to-md {
+        margin-top: 60px;
+        display:none;
+    } 
+    display: none;
+    @include md-to-lg{
+        margin-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(183,206,221,0) 100%);
+        width: 100%;
+    }
+   
    
 }
 
@@ -303,8 +375,12 @@
         margin-top: 10vw;
         display: flex;
         flex-direction: column;
-        background-color: #070611;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(183,206,221,0) 100%);
         width: 100%;
+    }
+
+    @include md {
+        display: none;
     }
    
 }
@@ -319,19 +395,44 @@
     height: 490px;
     
     padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contentx {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    padding-left: 10px;
 }
 
 .title {
     margin-top: 30px;
     font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.titletech {
+    margin-top: 30px;
+    font-size: 28px;
     color: white;
     margin-bottom: 20px;
+    font-weight: 500;
 }
+
 
 .howItWorks{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    
+    
+    background-color: #ececec;
     width: 100%;
     min-height: 350px;
 }
@@ -343,7 +444,7 @@
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
- padding-bottom: 100px;
+ 
     
     padding-left: 10px;
 }
@@ -353,7 +454,7 @@
     font-size: 28px;
     color: black;
     margin-bottom: 20px;
-
+    font-weight: 500;
 }
 
 .title3 {
@@ -361,10 +462,10 @@
     font-size: 28px;
     color: black;
     @include xs-to-md {
-        color: white;
+        //color: white;
     }
     margin-bottom: 20px;
-
+    font-weight: 500;
 }
 
 .innerContent{
@@ -373,13 +474,15 @@
     flex-wrap:wrap;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+ 
 }
 
 .hwitem {
     display: flex;
     flex-direction: column;
     //background-color: red;
-    height: 97px;
+    
     width: 400px;
     margin: 10px;
     margin-bottom: 20px;
@@ -388,7 +491,7 @@
 .hwitemIndex {
 
     color:#3cafeb;
-    font-size: 17px;
+    font-size: 60px;
 }
 .hwitemTitle {
     margin-top: 5px;
@@ -445,6 +548,16 @@
     padding-right: 10px;
 }
 
+.hwitemTitle4{
+    margin-top: 5px;
+    color: #4d4d4d;
+    @include xs-to-md{
+        //color: white;
+    }
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
 
 .hwitemSubtitle {
     color: #989696;
@@ -496,7 +609,34 @@
     margin-top: 5px;
     line-height: 22px;
     font-size: 18px;
-    color: #b6b6b6;
+    background-image: -webkit-linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+    background-image: -moz-linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+    background-image: -o-linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+     background-image: linear-gradient(to right, rgba(127,148,221,1),rgba(9,150,224,1));
+     display: inline-block;
+     /* Set the background size and repeat properties. */
+     background-size: 100%;
+     background-repeat: repeat;
+  
+     /* Use the text as a mask for the background. */
+     /* This will show the gradient as a text color rather than element bg. */
+     -moz-background-clip: text;
+     -moz-text-fill-color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+
+}
+
+.description6 {
+    margin-top: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: white;
+    width: 80%;
+    max-width: 300px;
+
+
 
 }
 
@@ -597,10 +737,10 @@
 
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background:linear-gradient(to top,  #ececec 20%, #ffffff 100%);
     min-height: 350px;
     @include xs-to-md{
-        background-color: black;
+        //background-color: black;
     }
     width: 100%;
 
@@ -616,7 +756,7 @@
 }
 
 .footer {
-    background-color: rgba(72,79,89,1);
+    background-color: black;
     
     width: 100%;
     min-height: 50px;
@@ -668,13 +808,14 @@ justify-content: center;
 }
 
 .horizontalItem {
-    margin: 10px;
+    margin: 20px;
 background-color: gray;
 width: 100%;
 max-width: 400px;
 height: 300px;
 border-radius: 16px;
-border: 1px solid #333333;
+box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
 
 
 }
@@ -689,6 +830,7 @@ border-radius: 16px;
 
 margin-left: auto;
 margin-right: auto;
+box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 
@@ -698,7 +840,7 @@ margin-right: auto;
     height: 300px;
     border-radius: 16px;
     z-index: 3;
-    border: 1px solid #333333;
+    
 }
 .imageTitle{
     text-shadow: 10px 10px 25px rgb(0,0,0),
@@ -727,7 +869,7 @@ margin-right: auto;
     margin-right: auto;
     
 
-  border: 1px solid #333333;
+ 
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
@@ -740,4 +882,97 @@ margin-right: auto;
     margin: 10px;
     background-color: red;
 
+}
+
+
+.downloadMobile{
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column;
+}
+.blue{
+    display: flex;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 1600px;
+
+    @include xs-to-md{
+        width: 200%;
+        background-color: #ececec;
+
+        margin-left: -50%;
+    }
+ 
+}
+
+
+.downloadTitle{
+   
+    font-size: 32px;
+    font-weight: 400;
+    color:black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -90px;
+    text-align: center;
+}
+
+.downloadSubtitle{
+    font-size: 18px;
+    color:#989696;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.downloaders{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    min-width: 360px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    
+    width: 80%;
+}
+
+.downloader{
+    height: 52px;
+    width:auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.lastMotto{
+    padding-top: 100px;
+    background-color: #3cafeb;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 90px;
+    width: 100%;
+}
+
+.mottoTitle{
+    font-size: 32px;
+    font-weight: 400;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+}
+.whiter{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
